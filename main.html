@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECCLESYIA.DEV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+<!-- Star field -->
+<div id="starfield"></div>
+<div id="vignette"></div>
+<div id="scanline"></div>
+
+<!-- Status bar -->
+<div id="statusbar">
+  <div class="status-left">
+    <span class="status-tag">ECCLESYIA.DEV</span>
+    <span class="status-sub">/ / DEEP.SPACE.PORTFOLIO</span>
+  </div>
+  <div class="status-right">
+    <div class="status-dot-group">
+      <span class="dot-sm"></span>
+      <span class="status-label">ONLINE</span>
+    </div>
+    <div class="status-dot-group">
+      <span class="dot-sm"></span>
+      <span class="status-label">SYNC</span>
+    </div>
+    <div class="status-dot-group">
+      <span class="dot-sm"></span>
+      <span class="status-label">READY</span>
+    </div>
+    <span id="clock"></span>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav id="navbar">
+  <a class="nav-link" href="#projects" data-section="projects">
+    <span class="nav-fkey">F1</span>_PROJECTS
+  </a>
+  <a class="nav-link" href="#stack" data-section="stack">
+    <span class="nav-fkey">F2</span>_STACK
+  </a>
+  <a class="nav-link" href="#about" data-section="about">
+    <span class="nav-fkey">F3</span>_ABOUT
+  </a>
+  <a class="nav-link" href="#contact" data-section="contact">
+    <span class="nav-fkey">F4</span>_CONTACT
+  </a>
+  <div class="nav-hint">
+    <span>F1–F4 TO NAVIGATE</span>
+    <span>宇宙開発者</span>
+  </div>
+</nav>
+
+<!-- Main -->
+<main>
+
+  <!-- Hero -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-code">[ OBS-00 ]</span>
+      <div class="panel-status">
+        <span class="panel-dot live"></span>
+        <span class="panel-status-text">NOMINAL</span>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-pre">&gt; OBJECT: SIHOMBING, ECCLESIATES / CS · SOFTWARE ENGINEERING</div>
+          <div class="hero-name">ECCLESIATES</div>
+          <div class="hero-name-accent">SIHOMBING<span id="cursor">_</span></div>
+          <p class="hero-bio">
+            Computer Science undergraduate at Binus University — Software Engineering track.
+            I build things to learn deeply, break things to understand them, and ship things
+            to prove they work. Currently orbiting web dev, ML, and game dev simultaneously.
+          </p>
+          <div class="hero-btns">
+            <a class="btn-primary" href="#projects">VIEW_PROJECTS ↗</a>
+            <a class="btn-secondary" href="#contact">OPEN_CHANNEL ↗</a>
+          </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="profile-card" id="stats-panel">
+          <div class="profile-heading">// PROFILE</div>
+          <div class="profile-row">
+            <span class="profile-key">ROLE</span>
+            <span class="profile-sep">──</span>
+            <span class="profile-val">CS UNDERGRADUATE</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-key">COLLEGE</span>
+            <span class="profile-sep">──</span>
+            <span class="profile-val">BINUS UNIVERSITY</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-key">ORG</span>
+            <span class="profile-sep">──</span>
+            <span class="profile-val">HIMTI · RESPONSI</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-key">LOCATION</span>
+            <span class="profile-sep">──</span>
+            <span class="profile-val">JAKARTA · BEKASI, ID</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-key">STATUS</span>
+            <span class="profile-sep">──</span>
+            <span class="profile-val live">AVAILABLE</span>
+          </div>
+          <div class="stats-grid">
+            <div>
+              <div class="stat-num" id="stat-projects">0</div>
+              <div class="stat-label">PROJECTS</div>
+            </div>
+            <div>
+              <div class="stat-num" id="stat-active">0</div>
+              <div class="stat-label">ACTIVE</div>
+            </div>
+            <div>
+              <div class="stat-num" id="stat-grad">0</div>
+              <div class="stat-label">GRAD EST</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="panel" id="projects">
+    <div class="panel-header">
+      <span class="panel-code">[ OBJ-CAT ]</span>
+      <div class="panel-status">
+        <span class="panel-dot live"></span>
+        <span class="panel-status-text">LOADED</span>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="filter-bar">
+        <span class="filter-label">FILTER:</span>
+        <button class="filter-btn active" data-filter="ALL">F1_ALL</button>
+        <button class="filter-btn" data-filter="PYTHON">F2_PYTHON</button>
+        <button class="filter-btn" data-filter="KOTLIN">F3_KOTLIN</button>
+        <button class="filter-btn" data-filter="JAVASCRIPT">F4_JAVASCRIPT</button>
+        <button class="filter-btn" data-filter="GODOT">F5_GODOT</button>
+        <button class="filter-btn" data-filter="NODE.JS">F6_NODE.JS</button>
+        <button class="filter-btn" data-filter="ML">F7_ML</button>
+        <button class="filter-btn" data-filter="HTML">F8_HTML</button>
+        <span class="filter-count" id="filter-count">11/11 PROJECTS</span>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+      <div class="legend">
+        <div class="legend-item">
+          <span class="legend-dot" style="background:var(--star);box-shadow:var(--dot-glow)"></span>
+          <span class="legend-text">ACTIVE — finished / running</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#7a9bc4"></span>
+          <span class="legend-text">W.I.P — in progress</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:var(--dim1)"></span>
+          <span class="legend-text">ARCHIVED — cancelled / void</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stack -->
+  <div class="panel" id="stack">
+    <div class="panel-header">
+      <span class="panel-code">[ SYS-MAP ]</span>
+      <div class="panel-status">
+        <span class="panel-dot live"></span>
+        <span class="panel-status-text">NOMINAL</span>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div id="stack-list"></div>
+      <div class="learn-block">
+        <div class="learn-heading">// LEARNING.TRAJECTORY</div>
+        <div class="learn-text">
+          KOTLIN · JAVA · TYPESCRIPT · REACT · C++ — targeting full-stack fluency across
+          systems, web, and game development. Reading from MIT curriculum materials.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="panel" id="about">
+    <div class="panel-header">
+      <span class="panel-code">[ MISSION.LOG ]</span>
+      <div class="panel-status">
+        <span class="panel-dot live"></span>
+        <span class="panel-status-text">NOMINAL</span>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="about-grid">
+        <div>
+          <div class="about-pre">&gt; ABOUT.TXT</div>
+          <div class="about-text">
+            <p>Computer Science undergraduate at Binus University, specializing in Software Engineering.
+            Based in Jakarta/Bekasi, Indonesia. Part of HIMTI as a Responsi — guiding and tutoring
+            fellow students — role active until 2027. Graduating in 2028.</p>
+            <p>My projects span ML assignments, web apps, game jams, and half-cancelled experiments.
+            Every void project taught something the active ones didn't.</p>
+            <p>The goal isn't to master one thing — it's to understand how everything connects.
+            Coffee helps. Chess doesn't (still losing).</p>
+          </div>
+        </div>
+        <div>
+          <div class="status-now">
+            <div class="status-now-heading">// STATUS.NOW</div>
+            <div class="status-row"><span class="status-row-key">role</span><span class="status-row-eq">=</span><span class="status-row-val">"CS UNDERGRADUATE"</span></div>
+            <div class="status-row"><span class="status-row-key">college</span><span class="status-row-eq">=</span><span class="status-row-val">"BINUS UNIVERSITY"</span></div>
+            <div class="status-row"><span class="status-row-key">org</span><span class="status-row-eq">=</span><span class="status-row-val">"HIMTI · RESPONSI"</span></div>
+            <div class="status-row"><span class="status-row-key">location</span><span class="status-row-eq">=</span><span class="status-row-val">"JAKARTA · BEKASI, ID"</span></div>
+            <div class="status-row"><span class="status-row-key">himti</span><span class="status-row-eq">=</span><span class="status-row-val">"UNTIL 2027"</span></div>
+            <div class="status-row"><span class="status-row-key">grad</span><span class="status-row-eq">=</span><span class="status-row-val">"2028 (EXPECTED)"</span></div>
+            <div class="status-row"><span class="status-row-key">status</span><span class="status-row-eq">=</span><span class="status-row-val live">"AVAILABLE"</span></div>
+          </div>
+          <div class="reads-block">
+            <div class="reads-heading">// DEEP.READS</div>
+            <div class="read-item"><span class="read-star">✦</span><span class="read-text">SICP — Abelson &amp; Sussman (MIT)</span></div>
+            <div class="read-item"><span class="read-star">✦</span><span class="read-text">Introduction to Algorithms — CLRS (MIT)</span></div>
+            <div class="read-item"><span class="read-star">✦</span><span class="read-text">MIT OCW Programming Language materials</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="panel" id="contact">
+    <div class="panel-header">
+      <span class="panel-code">[ SIG-OUT ]</span>
+      <div class="panel-status">
+        <span class="panel-dot live"></span>
+        <span class="panel-status-text">OPEN</span>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-pre">&gt; CONTACT</div>
+          <div class="contact-heading">GET IN TOUCH<span id="contact-cursor">_</span></div>
+          <p class="contact-bio">
+            Open to project collaboration, internship opportunities, or just a good
+            conversation about software. Always interested in building something meaningful.
+          </p>
+          <div class="contact-email-row">
+            <a class="contact-email" href="mailto:ecclesiatesnsbusiness@gmail.com">
+              ✉ ECCLESIATESNSBUSINESS@GMAIL.COM ↗
+            </a>
+            <button id="copy-btn">⧉ COPY</button>
+          </div>
+        </div>
+        <div class="contact-links">
+          <a class="contact-link" href="https://github.com/ecclesyia" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+          <a class="contact-link" href="https://www.linkedin.com/in/ecclesiates" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+          <span class="contact-link dim">TWITTER ↗ — COMING SOON</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Ticker -->
+<div id="ticker">
+  <div class="ticker-track">
+    <span class="ticker-text" id="ticker-a"></span>
+    <span class="ticker-text" id="ticker-b"></span>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modal-overlay">
+  <div id="modal-panel">
+    <div class="modal-header">
+      <div>
+        <div class="modal-meta" id="modal-meta"></div>
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-tagline" id="modal-tagline"></div>
+      </div>
+      <button class="modal-close-btn" id="modal-close">✕</button>
+    </div>
+    <div class="modal-status">
+      <span class="modal-dot" id="modal-dot"></span>
+      <span id="modal-status-text"></span>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-heading">// DESCRIPTION</div>
+      <div class="modal-desc" id="modal-desc"></div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-heading">// TECH STACK</div>
+      <div class="modal-tech" id="modal-tech"></div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-links" id="modal-links"></div>
+    </div>
+    <div class="modal-hint">PRESS ESC OR CLICK OUTSIDE TO CLOSE</div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
