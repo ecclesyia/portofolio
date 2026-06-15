@@ -39,3 +39,4 @@ All you need is a modern web browser.
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/ecclesyia/portofolio.git
+2. Open the index.html file in any web browser!
